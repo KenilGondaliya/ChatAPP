@@ -23,9 +23,6 @@ function App() {
                 <Left />
                 <Right />
               </div>
-
-
-            
             ) : (
               <Navigate to={"/login"} />
             )
@@ -46,17 +43,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

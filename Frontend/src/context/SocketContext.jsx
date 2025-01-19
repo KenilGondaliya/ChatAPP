@@ -3,7 +3,6 @@ import { useAuth } from "./AuthProvider";
 import io from "socket.io-client";
 const socketContext = createContext();
 
-// it is a hook.
 export const useSocketContext = () => {
   return useContext(socketContext);
 };
@@ -15,7 +14,7 @@ export const SocketProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("https://chatapp-dh57.onrender.com", {
+      const socket = io("http://localhost:5002/", {
         query: {
           userId: authUser.user._id,
         },
